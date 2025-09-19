@@ -1,6 +1,8 @@
+import pytest
 from playwright.sync_api import Playwright, Browser, expect, sync_playwright
 
 
+@pytest.mark.order(1)
 def test_login(playwright: Playwright) -> None:
     playwright.selectors.set_test_id_attribute("data-cy")
     browser = playwright.chromium.launch(
