@@ -1,3 +1,4 @@
 pytest
-playwright-pytest
+pytest-env
 pytest-order
+pytest-playwright
