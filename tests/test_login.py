@@ -14,7 +14,6 @@ def test_login(playwright: Playwright) -> None:
     )
     context = browser.new_context()
     page = context.new_page()
-    # page.goto("http://localhost:8080/")
     if baseUrl:
         page.goto(baseUrl)
     else:
@@ -28,7 +27,7 @@ def test_login(playwright: Playwright) -> None:
     context.storage_state(path="tests/.auth/state.json")
 
     # ---------------------
-    browser.close()
+    # browser.close()
 
 
 # with sync_playwright() as playwright:
